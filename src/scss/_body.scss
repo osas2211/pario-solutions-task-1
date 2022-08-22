@@ -30,3 +30,47 @@ body{
   z-index: -1;
 }
 
+.confirmPayment{
+  margin-top: 4rem;
+  padding-bottom: 0rem;
+  .header, .item, .total{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 4rem;
+    font-size: 1rem;
+    background-color: #2F80ED;
+    color: #fff;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    margin-bottom: 0;
+  }
+  .item, .total{
+    background-color: #fff;
+    color: $color-blue;
+    padding: 1rem 4rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 0;
+  }
+
+  .total{
+    border: 1px solid $color-blue;
+    border-radius: 6px;
+    width: 85%;
+    margin: auto;
+    padding: 1rem;
+  }
+  .items{
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.158);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    padding-bottom: 2rem;
+  }
+
+  hr{
+    width: 90%;
+    margin: 2rem auto;
+    display: block;
+  }
+}
+

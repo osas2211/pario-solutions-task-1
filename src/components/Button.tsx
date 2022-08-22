@@ -12,7 +12,7 @@ export const Button: React.FC<{
         <button className="btn-primary" type={type} >{children}</button>
       )}
       {variant === "secondary" && (
-        <button className="btn-secondary" type={type}>{children}</button>
+        <button className="btn-secondary" type={type} onClick={()=> window.location.reload()}>{children}</button>
       )}
     </>
   );
