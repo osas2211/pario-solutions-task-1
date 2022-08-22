@@ -48,9 +48,7 @@ export const PersonalInfo = () => {
         />
         <Select options={states} label={"State"} className="state"/>
       </div>
-      <Button type="submit" onSubmit={()=> {
-        dispatch({ type: actions.showBillInfo })
-      }}>Next</Button>
+      <Button type="submit">Next</Button>
       <Button type="reset" variant="secondary">Cancel Payment</Button>
     </Form>
   )

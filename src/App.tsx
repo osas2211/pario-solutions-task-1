@@ -7,6 +7,7 @@ import { BillInfo } from "./components/BillInfo";
 import { useFormFlow } from "./context/formFlow";
 import { useContext } from "react";
 import { FormFlow } from "./context/formFlow";
+import { ConfirmPayment } from "./components/confirmPayment";
 
 function App() {
   const [personalInfo, setPersonalInfo] = React.useState<Boolean>(true);
@@ -31,6 +32,7 @@ function App() {
         <div>
           {state.personalInfo && <PersonalInfo />}
           {state.billInfo && <BillInfo />}
+          { state.confirmPayment && <ConfirmPayment /> }
         </div>
       </Container>
     </div>

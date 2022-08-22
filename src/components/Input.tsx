@@ -2,7 +2,7 @@ import React from "react";
 
 interface InputInterface {
   label: string;
-  input: string;
+  input?: string;
   setInput: Function;
   important?: Boolean;
   info?: string;

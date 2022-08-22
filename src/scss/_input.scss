@@ -21,7 +21,7 @@ input:focus, select:focus{
   color: #817E9E;
 }
 
-.location{
+.location, .card-details{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,3 +35,14 @@ input:focus, select:focus{
   width: 35%;
 }
 
+.card-number{
+  width: 50%;
+}
+
+.expiry-date{
+  width: 25%;
+}
+
+.cvv{
+  width: 20%;
+}
