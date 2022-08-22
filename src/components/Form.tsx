@@ -1,8 +1,11 @@
 import React, { ReactNode } from 'react'
 
-export const Form: React.FC<{children: ReactNode}> = ({ children }) => {
+export const Form: React.FC<{children: ReactNode, onSubmit: Function}> = ({ children, onSubmit }) => {
   return (
-    <form>
+    <form onSubmit={(e)=> {
+      e.preventDefault()
+      onSubmit()
+    }}>
       { children }
     </form>
   )

@@ -4,6 +4,8 @@ import { Input } from "./Input"
 import { Button } from "./Button"
 import { Select } from "./Select"
 import { states } from "../states"
+import { useFormFlow } from "../context/formFlow"
+import { actions } from "../context/formFlow"
 
 export const PersonalInfo = () => {
   const [name, setName] = React.useState("")
@@ -11,8 +13,9 @@ export const PersonalInfo = () => {
   const [address1, setAddress1] = React.useState("")
   const [address2, setAddress2] = React.useState("")
   const [LGA, setLGA] = React.useState("")
+  const {formState, dispatch} = useFormFlow()
   return (
-    <Form>
+    <Form onSubmit={()=>dispatch({type: actions.showBillInfo})}>
       <Input label="Name" setInput={setName} input={name} type="text" />
       <Input
         label="Email Address"
@@ -43,16 +46,11 @@ export const PersonalInfo = () => {
           type="text"
           className="lga"
         />
-        {/* <Input 
-          label="State"
-          setInput={setState}
-          input={state}
-          type="text"
-          className="state"
-        /> */}
         <Select options={states} label={"State"} className="state"/>
       </div>
-      <Button type="submit">Next</Button>
+      <Button type="submit" onSubmit={()=> {
+        dispatch({ type: actions.showBillInfo })
+      }}>Next</Button>
       <Button type="reset" variant="secondary">Cancel Payment</Button>
     </Form>
   )
