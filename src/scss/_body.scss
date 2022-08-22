@@ -8,7 +8,6 @@
 body{
   position: relative;
   height: 100vh;
-  
   font-family: 'Roboto', sans-serif;
   z-index: 1;
 }
@@ -71,6 +70,58 @@ body{
     width: 90%;
     margin: 2rem auto;
     display: block;
+  }
+}
+
+.purchased{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  padding: 4rem 20%;
+  transform: translateX(-50%);
+  width: 70%;
+  background-color: #fff;
+  color: #4F4F4F;
+  box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.123);
+
+  h1{
+    color: $color-blue;
+    margin-bottom: 2rem;
+  }
+
+  .icon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .done{
+    font-size: 2rem;
+    background-color: #fff;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.096);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(68, 224, 68);
+  }
+
+  a, a:visited{
+    color: $color-primary;
+  }
+}
+
+@media (max-width: 760px) {
+  .purchased{
+    padding: 4rem 2rem;
+
+    h1{
+      font-size: 1.5rem;
+    }
   }
 }
 

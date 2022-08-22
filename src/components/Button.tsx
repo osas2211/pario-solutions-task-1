@@ -3,13 +3,15 @@ import React, { ReactNode } from "react";
 export const Button: React.FC<{
   children: ReactNode;
   variant?: string;
-  onSubmit?: Function
+  onClick?: Function
   type: "submit" | "button" | "reset";
-}> = ({ children, variant = "primary", type, onSubmit }) => {
+}> = ({ children, variant = "primary", type,  onClick }) => {
   return (
     <>
       {variant === "primary" && (
-        <button className="btn-primary" type={type} >{children}</button>
+        <button className="btn-primary" type={type} onClick={()=>{
+          onClick && onClick()
+        }}>{children}</button>
       )}
       {variant === "secondary" && (
         <button className="btn-secondary" type={type} onClick={()=> window.location.reload()}>{children}</button>
