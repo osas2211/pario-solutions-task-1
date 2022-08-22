@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-export const Form = () => {
+export const Form: React.FC<{children: ReactNode}> = ({ children }) => {
   return (
-    <div>Form</div>
+    <form>
+      { children }
+    </form>
   )
 }

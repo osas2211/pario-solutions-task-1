@@ -1,0 +1,37 @@
+input, select{
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 10px 10px 10px 20px;
+  font-size: 1.1rem;
+  border: 1px solid $color-blue;
+  border-radius: 5px;
+  color: #4F4F4F;
+  transition: .3s;
+  background-color: #fff;
+}
+
+input:focus, select:focus{
+  outline: none;
+  border: 1px solid $color-primary;
+}
+
+.info{
+  padding: 0.8rem 0;
+  font-size: 0.85rem;
+  color: #817E9E;
+}
+
+.location{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lga{
+  width: 60%;
+}
+
+.state{
+  width: 35%;
+}
+

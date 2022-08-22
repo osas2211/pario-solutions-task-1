@@ -2,6 +2,7 @@ import React from 'react';
 import "./scss/app.scss"
 import { Container } from './components/Container';
 import { Navigation } from './components/Navigation';
+import { PersonalInfo } from './components/PersonalInfo'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Container>
         <header className='header'>Complete your Purchase</header>
         <Navigation />
+        <PersonalInfo />
       </Container>
     </div>
   );
